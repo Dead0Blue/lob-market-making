@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mmlab"
+version = "1.0.0"
+description = "Limit order book simulator and market-making strategies: Avellaneda-Stoikov, order-book signals and reinforcement learning"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Adam Ammour"}]
+dependencies = ["numpy>=1.22"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "matplotlib>=3.5"]
+record = ["websockets>=11"]
+
+[tool.setuptools]
+packages = ["mmlab"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
